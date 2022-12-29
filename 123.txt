@@ -1,0 +1,38 @@
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.93.17.59 --port 40000 --module web --protocol tcp
+Connection to 160.93.17.59 40000 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.93.17.59 --port 55880 --module web --protocol tcp
+Connection to 160.93.17.59 55880 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.93.17.59 --port 55806 --module web --protocol tcp
+Connection to 160.93.17.59 55806 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.93.17.59 --port 55825 --module web --protocol tcp
+Connection to 160.93.17.59 55825 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.93.17.59 --port 55869 --module web --protocol tcp
+Connection to 160.93.17.59 55869 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)#
+
+
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.99.59.93 --port 40000 --module web --protocol tcp
+Connection to 160.93.17.59 40000 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.99.59.93 --port 55880 --module web --protocol tcp
+Connection to 160.93.17.59 55880 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.99.59.93 --port 55806 --module web --protocol tcp
+Connection to 160.93.17.59 55806 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.99.59.93 --port 55825 --module web --protocol tcp
+Connection to 160.93.17.59 55825 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)# nc --dest 160.99.59.93 --port 55869 --module web --protocol tcp
+Connection to 160.93.17.59 55869 port [tcp] succeeded!
+Proxy10mgt.ha.org.hk(diagnose)#
+
+http://proxypac.ha.org.hk/open.pac
+
+http://uatpac.ha.org.hk/prepro_open.pac
+
+160.*;*.corpdev.hadev.org.hk;wtstapp10c.corpdev.hadev.org.hk;ha.home;scp.home;pki.home;itip.home;wcdcapp47c.corp.ha.org.hk;rms.home;csis.home;itip-corp-is1-2016.server.ha.org.hk;*.ha.org.hk;160.88.87.55;160.88.87.149;160.88.87.55;160.88.87.54;160.87.34.20;160.87.34.21;dc4pkiweb01;*.home;o1-itsm-app1;160.86.32.242;obsapp.ha.org.hk;160.86.34.246;160.88.87.135;192.168.*;01river.com;182.160.1.149
+
+
+/opt/WCG/WCGAdmin stop
+./content_gateway -Cclear
+/opt/WCG/WCGAdmin start
+
+
+https://tinyurl.com/portal-reg
